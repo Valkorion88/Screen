@@ -26,6 +26,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 18px 20px;
+  padding-top: calc(18px + env(safe-area-inset-top));
   border-bottom: 1px solid #2a2a3a;
   position: sticky;
   top: 0;
@@ -36,7 +37,12 @@ body {
 .tagline { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
 main { max-width: 640px; margin: 0 auto; padding: 18px 16px 60px; }
 
-.panic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+/* Panic grid flows responsively: 2 tiles on a narrow phone, more as width allows. */
+.panic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
 .panic-btn {
   display: flex;
   flex-direction: column;
@@ -117,7 +123,7 @@ main { max-width: 640px; margin: 0 auto; padding: 18px 16px 60px; }
   border-radius: 10px;
   padding: 12px;
   color: var(--text);
-  font-size: 15px;
+  font-size: 16px;
 }
 #logInput::placeholder { color: var(--muted); }
 .mini-btn {
@@ -207,7 +213,4 @@ main { max-width: 640px; margin: 0 auto; padding: 18px 16px 60px; }
   padding: 14px;
   line-height: 1.5;
   margin: 0 0 12px;
-}
-@media (min-width: 520px) {
-  .panic-grid { grid-template-columns: repeat(4, 1fr); }
 }

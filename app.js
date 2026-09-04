@@ -87,7 +87,34 @@
     return { kind: "Complication", summary: "Complication: " + c, html: html };
   }
 
-  var GENERATORS = { npc: genNPC, rumors: genRumors, shop: genShop, complication: genComplication };
+  function genScene() {
+    var place = rand(D.sceneNames);
+    var sight = rand(D.sceneSights);
+    var sound = rand(D.sceneSounds);
+    var smell = rand(D.sceneSmells);
+    var feature = rand(D.sceneFeatures);
+    var danger = rand(D.sceneDangers);
+    var html =
+      "<h3>" + esc(place) + "</h3>" +
+      "<ul>" +
+      "<li><strong>You see:</strong> " + esc(sight) + "</li>" +
+      "<li><strong>You hear:</strong> " + esc(sound) + "</li>" +
+      "<li><strong>You smell:</strong> " + esc(smell) + "</li>" +
+      "<li><strong>One feature:</strong> " + esc(feature) + "</li>" +
+      "<li><strong>Lurking:</strong> " + esc(danger) + "</li>" +
+      "</ul>";
+    var summary = place + " -- see: " + sight + "; hear: " + sound +
+      "; smell: " + smell + "; feature: " + feature + "; lurking: " + danger + ".";
+    return { kind: "Instant Scene", summary: summary, html: html };
+  }
+
+  var GENERATORS = {
+    npc: genNPC,
+    rumors: genRumors,
+    shop: genShop,
+    complication: genComplication,
+    scene: genScene
+  };
 
   // ---- result rendering ----
   var resultCard = document.getElementById("resultCard");
@@ -95,6 +122,7 @@
   var resultBody = document.getElementById("resultBody");
 
   function generate(key) {
+    if (!GENERATORS[key]) return;
     lastGen = key;
     current = GENERATORS[key]();
     resultKind.textContent = current.kind;

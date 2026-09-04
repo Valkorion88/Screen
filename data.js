@@ -4,19 +4,27 @@ window.SCREEN_DATA = {
   npcFirstNames: [
     "Bram", "Eldrin", "Sable", "Tovin", "Maraia", "Ysolde", "Corvin", "Fenn",
     "Lila", "Garrek", "Nimue", "Osric", "Perra", "Quill", "Rhoswen", "Sten",
-    "Ulric", "Vesna", "Wendel", "Xara", "Doriath", "Alis", "Bevan", "Cael"
+    "Ulric", "Vesna", "Wendel", "Xara", "Doriath", "Alis", "Bevan", "Cael",
+    "Dorn", "Esme", "Faelan", "Greta", "Harl", "Ione", "Joss", "Kesh",
+    "Lorwyn", "Mabon", "Neris", "Orin", "Pell", "Runa", "Talia", "Veymar",
+    "Asha", "Brannoc", "Cira", "Dagen", "Elowen", "Halvard"
   ],
   npcSurnames: [
     "Ashdown", "Blackbriar", "Coldwater", "Dunmore", "Emberfell", "Farrow",
     "Grimwald", "Hollowbrook", "Ironwood", "Kettleblack", "Larkspur", "Mournhold",
     "Nightingale", "Oakhart", "Ravensworth", "Stormwell", "Thornbury", "Underbough",
-    "Wexley", "Yarrow", "Quickfoot", "Dunn"
+    "Wexley", "Yarrow", "Quickfoot", "Dunn", "Fairwind", "Graymantle", "Hookfinger",
+    "Ironmonger", "Lowmoor", "Marsh", "Penrose", "Quill", "Redfern", "Saltkettle",
+    "Tallow", "Vane", "Weatherby", "Cobb", "Drexler", "Halloway"
   ],
   npcRoles: [
     "innkeeper", "dockhand", "hedge witch", "retired sellsword", "back-alley fence",
     "temple acolyte", "caravan guard", "street urchin", "alchemist", "harbormaster",
     "gravedigger", "tax collector", "bard down on their luck", "blacksmith",
-    "ratcatcher", "off-duty city watch", "traveling merchant", "stablehand"
+    "ratcatcher", "off-duty city watch", "traveling merchant", "stablehand",
+    "midwife", "moneylender", "lamplighter", "scribe for hire", "fishwife",
+    "disgraced knight", "cartographer", "cult recruiter (undeclared)", "beekeeper",
+    "night-soil collector", "apothecary", "cheesemonger", "bounty broker", "ferryman"
   ],
   npcTraits: [
     "nervously cheerful, laughs at the wrong moments",
@@ -30,7 +38,15 @@ window.SCREEN_DATA = {
     "boastful about a past that may be invented",
     "kind, but plainly exhausted",
     "twitchy and always watching the door",
-    "unnervingly calm, smiles too much"
+    "unnervingly calm, smiles too much",
+    "flirtatious with absolutely everyone",
+    "distracted, keeps losing the thread of the conversation",
+    "grieving, and covering it with hard work",
+    "sly, answers every question with a question",
+    "painfully honest, even when it costs them",
+    "proud of one small thing far past reason",
+    "suspicious of outsiders, warms up slowly",
+    "generous to a fault and secretly broke"
   ],
   npcVoices: [
     "low gravel, speaks slowly",
@@ -41,7 +57,12 @@ window.SCREEN_DATA = {
     "dry monotone punctuated by sudden sharp laughs",
     "thick rural drawl",
     "precise, faintly foreign accent",
-    "breathless, never quite finishes a thought"
+    "breathless, never quite finishes a thought",
+    "nasal and put-upon, sighs a lot",
+    "soft and careful, like they are always being overheard",
+    "gruff bark that softens when no one is looking",
+    "overly polite, calls everyone by an invented title",
+    "stutters on hard consonants, then rushes through"
   ],
   npcWants: [
     "a debt paid before someone important finds out",
@@ -53,7 +74,15 @@ window.SCREEN_DATA = {
     "someone else to blame for a recent death",
     "enough coin to finally leave this life behind",
     "a message delivered to someone they can't approach",
-    "the party gone before they cause trouble"
+    "the party gone before they cause trouble",
+    "a witness to something they saw silenced or bought off",
+    "revenge on a guildmaster who ruined them",
+    "a cure for a sickness they can't name",
+    "their good name back after a false accusation",
+    "an audience with someone far above their station",
+    "a child kept out of the family business",
+    "one last score, then they swear they'll stop",
+    "the party to take a package and never open it"
   ],
   npcSecrets: [
     "is skimming coin from their employer",
@@ -65,7 +94,15 @@ window.SCREEN_DATA = {
     "poisoned someone years ago and was never caught",
     "secretly works for the people hunting the party",
     "is dying, and hasn't told anyone",
-    "started the fire everyone blames on bandits"
+    "started the fire everyone blames on bandits",
+    "is a deserter living under a dead man's name",
+    "has been replaced, and only the dog has noticed",
+    "sold a map to something that should have stayed buried",
+    "is in love with someone they're supposed to betray",
+    "keeps a shrine to a forbidden power in the back room",
+    "already spent money they were only holding for another",
+    "knows the well is poisoned and hasn't said why",
+    "is the last of a bloodline someone is trying to end"
   ],
   rumorsTrue: [
     "The old mill really is cursed - a child drowned in the race and the miller covered it up.",
@@ -73,15 +110,27 @@ window.SCREEN_DATA = {
     "There is a smuggler's tunnel under the fishmonger's, and the watch captain knows.",
     "The traveling priest is genuine - he's healed two people for free already.",
     "The well on Coin Street has gone bad; three families are quietly sick.",
-    "The baron hasn't been seen in a month. His steward signs everything now."
+    "The baron hasn't been seen in a month. His steward signs everything now.",
+    "The bridge tolls doubled because someone up top owes a very patient lender.",
+    "That beggar by the gate used to be a captain of the guard, and he still watches everyone.",
+    "The new bakery undercuts everyone because the flour falls off the back of a wagon.",
+    "The graveyard's night watchman quit; nobody's been paid to replace him yet.",
+    "A room at the Gilded Sow is always kept empty, always paid for, never used.",
+    "The tanner's apprentice has been forging the guildmaster's seal for months."
   ],
   rumorsFalse: [
     "They say a dragon nests in the eastern hills. (It's an old wyvern skeleton and a very loud goat farmer.)",
     "The tavern's cook is a retired assassin. (He just has a temper and good knives.)",
     "The ruins are full of gold. (They're full of damp and rats.)",
-    "The new merchant is secretly nobility in disguise. (He's a merchant in disguise as a slightly richer merchant.)",
+    "The new merchant is secretly nobility in disguise. (He's a merchant disguised as a slightly richer merchant.)",
     "A ghost walks the north wall at midnight. (It's a lonely sentry and his lantern.)",
-    "The apothecary sells a cure for anything. (She sells sugar water with confidence.)"
+    "The apothecary sells a cure for anything. (She sells sugar water with confidence.)",
+    "The lord's daughter eloped with a pirate. (She's at her aunt's, bored, learning falconry.)",
+    "The plague is coming from the river. (Bad oysters. It's always bad oysters.)",
+    "The forest witch steals children. (She returns lost ones and won't take the credit.)",
+    "The mine collapsed on a curse. (It collapsed on cut corners and a cheap foreman.)",
+    "There's treasure sealed behind the chapel wall. (There's a very old, very dead cat.)",
+    "The comet means the king will die. (The comet means it's autumn.)"
   ],
   rumorsMisleading: [
     "The chapel fire was an accident - everyone agrees. (Everyone agrees because they were told to.)",
@@ -89,7 +138,13 @@ window.SCREEN_DATA = {
     "The guildmaster is generous to newcomers. (Generous with debts that never quite clear.)",
     "That house has been empty for years. (Empty of the living.)",
     "The two shops are fierce rivals. (They're owned by the same silent partner.)",
-    "The festival is just tradition. (Tradition that ends with someone chosen and gone by morning.)"
+    "The festival is just tradition. (Tradition that ends with someone chosen and gone by morning.)",
+    "The healer never loses a patient. (The ones she can't save are never seen again.)",
+    "The garrison is undermanned because of the harvest. (Because half of them deserted, and command is hiding it.)",
+    "The old lord was beloved by all. (All who are left to speak of him.)",
+    "The river's safe to cross at the ford now. (Now that it's taken what it wanted this season.)",
+    "The orphanage takes anyone in. (And a quiet few are never adopted, only... moved on.)",
+    "The mayor and the bandits have an understanding. (The understanding is that they're the same people.)"
   ],
   shopkeepers: [
     "a one-eyed halfling who never stops eating",
@@ -98,7 +153,14 @@ window.SCREEN_DATA = {
     "a bored noble slumming as a merchant for a bet",
     "a nervous apprentice whose master is mysteriously 'out'",
     "a retired adventurer with a limp and strong opinions",
-    "a talking raven and the very tired woman it belongs to"
+    "a talking raven and the very tired woman it belongs to",
+    "a gnome buried behind towers of unlabeled crates",
+    "a smiling zealot who tithes a cut of every sale",
+    "an ex-smuggler who prices by how much they like you",
+    "a child minding the stall while a parent 'runs an errand'",
+    "a dwarf who insists every item has a tragic backstory",
+    "a masked seller who never gives a straight name",
+    "a cheerful widow who upsells relentlessly through tears"
   ],
   shopItems: [
     { name: "Hooded lantern, shuttered", low: 5, high: 9, unit: "gp" },
@@ -112,7 +174,19 @@ window.SCREEN_DATA = {
     { name: "Flask of strong spirits", low: 1, high: 4, unit: "sp" },
     { name: "Iron spikes (bag of 10)", low: 8, high: 12, unit: "sp" },
     { name: "Dubious 'holy' water", low: 15, high: 30, unit: "gp" },
-    { name: "Charm against the evil eye", low: 3, high: 9, unit: "sp" }
+    { name: "Charm against the evil eye", low: 3, high: 9, unit: "sp" },
+    { name: "Caltrops (bag)", low: 1, high: 2, unit: "gp" },
+    { name: "Ten-foot pole (collapsible, allegedly)", low: 4, high: 9, unit: "cp" },
+    { name: "Waterskin, waxed", low: 5, high: 8, unit: "sp" },
+    { name: "Signal whistle, carved bone", low: 6, high: 14, unit: "sp" },
+    { name: "Manacles, slightly used", low: 1, high: 2, unit: "gp" },
+    { name: "Bundle of torches (5)", low: 3, high: 6, unit: "cp" },
+    { name: "Sealing wax and a stranger's signet", low: 12, high: 25, unit: "gp" },
+    { name: "Dried rations (3 days)", low: 4, high: 8, unit: "sp" },
+    { name: "A rabbit's foot, 'lucky'", low: 2, high: 5, unit: "sp" },
+    { name: "Spyglass, scratched lens", low: 30, high: 70, unit: "gp" },
+    { name: "Bottle of ink and three quills", low: 8, high: 15, unit: "sp" },
+    { name: "Tinderbox that mostly works", low: 3, high: 5, unit: "sp" }
   ],
   complications: [
     "The city gates slam shut - a curfew, effective immediately, no reason given.",
@@ -126,6 +200,124 @@ window.SCREEN_DATA = {
     "It starts to rain - hard - and the only shelter belongs to someone dangerous.",
     "Someone offers to help. They are lying, and they are convincing.",
     "A child tugs a sleeve and whispers a warning, then bolts.",
-    "The thing the party came for is already gone. Recently."
+    "The thing the party came for is already gone. Recently.",
+    "A fire breaks out two doors down and the street fills with panic.",
+    "An old debt is called in publicly, at the worst possible time.",
+    "The person they're meeting sent a double, and it shows.",
+    "A drunk picks a fight that is very much a distraction.",
+    "The bridge ahead is out, and the detour runs through worse.",
+    "Someone screams upstairs. Then stops.",
+    "A tax official appears and starts asking who owns what.",
+    "The party's contact is here - dead in a back room, still warm.",
+    "A pet or animal companion bolts toward something no one else has noticed.",
+    "The exits are quietly being blocked, one by one.",
+    "A rival adventuring party strolls in, already smug.",
+    "The coin they were paid with is counterfeit, and a merchant just noticed."
+  ],
+  sceneNames: [
+    "A cramped, smoke-stained tavern common room",
+    "A rain-slick alley behind the market",
+    "A forgotten shrine reclaimed by moss and roots",
+    "A creaking rope bridge over a fog-filled gorge",
+    "A merchant's warehouse stacked to the rafters",
+    "A flooded cellar with a single dry island of crates",
+    "A moonlit graveyard with fresh-turned earth",
+    "A crowded dockside at the turning of the tide",
+    "A collapsed mine shaft, timbers groaning",
+    "A noble's overgrown pleasure garden gone to seed",
+    "A frostbitten mountain pass strewn with old bones",
+    "A candlelit library where the dust hasn't been disturbed",
+    "A burned-out farmhouse still ticking with heat",
+    "A cave mouth breathing cold, wet air",
+    "A festival square the morning after, ribbons everywhere",
+    "A low-ceilinged smugglers' den behind a false wall",
+    "A windswept clifftop with a lone leaning tree",
+    "A temple undercroft lined with silent alcoves",
+    "A sunken ballroom, chandelier half-submerged",
+    "A toll house at a lonely crossroads"
+  ],
+  sceneSights: [
+    "a single lantern swinging on its own",
+    "muddy footprints leading somewhere they shouldn't",
+    "a table set for a meal no one came back to",
+    "scratch marks, chest-high, along one wall",
+    "a shape under a tarp that is the wrong size for cargo",
+    "fresh flowers laid where nothing should be mourned",
+    "a door standing open that ought to be locked",
+    "coins scattered as if dropped in a hurry",
+    "a mural whose eyes have all been scraped away",
+    "steam rising from a cup still warm",
+    "chalk symbols half-swept from the floor",
+    "a child's toy, clean, in a room full of dust",
+    "banners of a house that fell a generation ago",
+    "a trail of dark droplets, drying to brown",
+    "one window boarded from the inside",
+    "reflections in still water that lag a half-beat behind"
+  ],
+  sceneSounds: [
+    "a slow drip echoing from somewhere below",
+    "muffled voices that stop the moment you listen",
+    "wind that seems to carry a name",
+    "the creak of weight shifting overhead",
+    "a music box winding down in the next room",
+    "distant bells at the wrong hour",
+    "scratching, patient and rhythmic, inside a wall",
+    "laughter that cuts off too sharply",
+    "the hush of a crowd holding its breath",
+    "boots on stone, then nothing, then boots again",
+    "a hymn hummed off-key by no visible singer",
+    "rope groaning against wood under new strain",
+    "the flap of many wings and then dead silence",
+    "someone weeping quietly and refusing to stop"
+  ],
+  sceneSmells: [
+    "wet iron, like a coin left in the rain",
+    "incense gone stale and sweet",
+    "smoke that shouldn't be there yet",
+    "brine and rot from the low tide",
+    "tallow, sweat, and spilled ale",
+    "cold stone and older water",
+    "crushed herbs, medicinal and bitter",
+    "burnt hair under the woodsmoke",
+    "damp earth freshly turned",
+    "perfume, expensive, badly out of place",
+    "candle wax and something faintly spoiled beneath it",
+    "ozone, sharp, like the air before lightning",
+    "animal musk from a den you can't see",
+    "old parchment and slow decay"
+  ],
+  sceneFeatures: [
+    "a locked strongbox chained to the floor",
+    "a well that answers dropped stones a beat too late",
+    "a ladder leading up into darkness",
+    "a shrine with a fresh offering and no worshippers",
+    "a heavy curtain hiding a second doorway",
+    "a ledger left open to a page torn halfway out",
+    "a barred cell, empty, the bars bent outward",
+    "a hearth still warm with no fire laid",
+    "a trapdoor under a rug that doesn't sit flat",
+    "a portrait whose subject you feel you should know",
+    "a rack of tools, one conspicuously missing",
+    "a pool of still black water reflecting no ceiling",
+    "a statue whose outstretched hand fits a key",
+    "a rope leading down a shaft, taut, quivering",
+    "a bricked-up archway with newer mortar",
+    "a stack of coffins, one lid slightly ajar"
+  ],
+  sceneDangers: [
+    "someone is already here, and hasn't announced themselves",
+    "the way out is slowly filling with water",
+    "a tripwire glints at ankle height near the threshold",
+    "the floorboards sag over a drop no one can see the bottom of",
+    "eyes in the dark that blink out of sync",
+    "the air is thin and getting worse the deeper you go",
+    "a smell of gas that a single spark would answer",
+    "the structure shifts, dust sifting from above",
+    "a watcher at a high window, gone when you look twice",
+    "the exit you came through is no longer where it was",
+    "something large breathes, slow and unbothered, nearby",
+    "the ground is thick with caltrops or worse underfoot",
+    "a fever-cold spot that saps warmth and nerve",
+    "the only light source is guttering, minutes from out"
   ]
 };

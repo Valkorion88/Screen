@@ -1,0 +1,19 @@
+{
+  "name": "Screen - DM Companion",
+  "short_name": "Screen",
+  "description": "A live companion for Dungeon Masters: fast improvisation and one-tap session logging.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#12121a",
+  "theme_color": "#12121a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
