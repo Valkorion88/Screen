@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screen - DM Companion</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <h1>Screen</h1>
+      <p class="tagline">Stay in the moment. Remember everything.</p>
+    </div>
+    <button id="recapBtn" class="ghost-btn" type="button">Recap</button>
+  </header>
+
+  <main>
+    <section class="panic" aria-label="Panic Button">
+      <div class="panic-grid">
+        <button class="panic-btn" data-gen="npc" type="button"><span class="panic-icon">NPC</span><span>Instant NPC</span></button>
+        <button class="panic-btn" data-gen="rumors" type="button"><span class="panic-icon">3x</span><span>Tavern Rumors</span></button>
+        <button class="panic-btn" data-gen="shop" type="button"><span class="panic-icon">$</span><span>Quick Shop</span></button>
+        <button class="panic-btn" data-gen="complication" type="button"><span class="panic-icon">!</span><span>Complication</span></button>
+      </div>
+    </section>
+
+    <section id="resultCard" class="result-card hidden" aria-live="polite">
+      <div class="result-head">
+        <span id="resultKind" class="result-kind"></span>
+        <button id="regenBtn" class="ghost-btn" type="button">Reroll</button>
+      </div>
+      <div id="resultBody" class="result-body"></div>
+      <div class="flag-row">
+        <span class="flag-label">Log as:</span>
+        <button class="flag-btn" data-flag="remember" type="button">Remember</button>
+        <button class="flag-btn" data-flag="unresolved" type="button">Unresolved</button>
+        <button class="flag-btn" data-flag="callback" type="button">Callback</button>
+      </div>
+    </section>
+
+    <section class="quick-log">
+      <input id="logInput" type="text" placeholder="Log a beat... (what just happened)" />
+      <button id="logBtn" class="mini-btn" type="button">Log</button>
+    </section>
+
+    <section class="session">
+      <div class="session-head">
+        <h2>Session log <span id="logCount" class="count">0</span></h2>
+        <button id="clearBtn" class="ghost-btn danger" type="button">Clear</button>
+      </div>
+      <ul id="sessionLog" class="session-list"></ul>
+      <p id="emptyState" class="empty">Nothing logged yet. Hit a Panic Button or jot a beat above.</p>
+    </section>
+  </main>
+
+  <div id="recapModal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Session recap">
+    <div class="modal-inner">
+      <div class="modal-head">
+        <h2>Previously on...</h2>
+        <button id="closeRecap" class="ghost-btn" type="button">Close</button>
+      </div>
+      <pre id="recapText" class="recap-text"></pre>
+      <button id="copyRecap" class="mini-btn" type="button">Copy recap</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
