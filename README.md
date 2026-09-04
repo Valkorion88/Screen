@@ -27,23 +27,21 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-## Use it on mobile
-The app is a mobile web app: `manifest.webmanifest` and the icon/meta tags let you **Add to Home Screen** for a full-screen, app-like launch (no browser chrome).
-
-Once GitHub Pages is live (below), open the Pages URL on your phone and:
-- **iOS Safari:** Share > Add to Home Screen.
-- **Android Chrome:** menu > Add to Home screen / Install app.
-
 ## Deploying with GitHub Pages
-This repo includes a workflow at `.github/workflows/deploy-pages.yml` that publishes the site on every push to `main`.
+This is a static site (a root `index.html`), so there is no build step and no workflow needed.
 
-One-time setup in the repo: **Settings > Pages > Build and deployment > Source: GitHub Actions**. After that, each push to `main` deploys automatically, and the live URL will be:
+One-time setup in the repo: **Settings > Pages > Build and deployment > Source: "Deploy from a branch" > Branch: `main`, folder: `/ (root)` > Save.** Give it a minute to build, and the live URL will be:
 
 ```
 https://valkorion88.github.io/Screen/
 ```
 
-(Alternative with no workflow: Settings > Pages > Source: "Deploy from a branch" > Branch: `main` / root.)
+Every later push to `main` republishes automatically.
+
+## Use it on mobile
+The app is a mobile web app: `manifest.webmanifest` and the icon / meta tags let you **Add to Home Screen** for a full-screen, app-like launch (no browser chrome). Once Pages is live, open the URL above on your phone and:
+- **iOS Safari:** Share > Add to Home Screen.
+- **Android Chrome:** menu > Add to Home screen / Install app.
 
 ## Files
 - `index.html` - app shell and layout
@@ -51,7 +49,6 @@ https://valkorion88.github.io/Screen/
 - `data.js` - generator content tables (names, roles, traits, rumors, shop items, scenes, complications)
 - `app.js` - generators, session log, recap, persistence
 - `manifest.webmanifest`, `icon.svg` - mobile install / home-screen support
-- `.github/workflows/deploy-pages.yml` - GitHub Pages deployment
 
 ## Roadmap (post-MVP)
 - Context-aware generation (tie NPCs, rumors, and scenes to the current location and campaign)
